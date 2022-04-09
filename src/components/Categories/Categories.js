@@ -1,3 +1,3 @@
-const Categories = () => <div>Categories page</div>;
+const Categories = () => <button type="button">Check status</button>;
 
 export default Categories;
