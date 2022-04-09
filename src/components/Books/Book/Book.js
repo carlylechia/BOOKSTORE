@@ -4,6 +4,7 @@ const Book = ({ author, title }) => (
   <>
     <p>{title}</p>
     <p>{author}</p>
+    <button type="button">Remove</button>
   </>
 );
 
