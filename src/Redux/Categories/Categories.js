@@ -9,7 +9,7 @@ const initialState = {
 const categoriesReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case BOOK_STATUS:
-      return { ...state, status: action.payload };
+      return { ...state, status: 'Under construction' };
     default:
       return state;
   }
