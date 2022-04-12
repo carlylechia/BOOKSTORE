@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Navbar from './Redux/Navbar/Navbar';
 import dispatchToProps from './Redux/dispatchToProps';
 import stateToProps from './Redux/stateToProps';
 import Books from './Redux/Books/Books';
 import Categories from './Redux/Categories/Categories';
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => (
   <>

@@ -1,3 +1,3 @@
-const dispatchToProps = (dispatch) => dispatch({});
+const dispatchToProps = () => ({});
 
 export default dispatchToProps;

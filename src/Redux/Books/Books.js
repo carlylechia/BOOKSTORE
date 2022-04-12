@@ -1,28 +1,22 @@
-import { useState, useEffect } from 'react';
-import Book from './Book/Book';
-import Form from './Form/Form';
+const ADD_BOOK = 'BOOKSTORE/Books/ADD_BOOK';
+const REMOVE_BOOK = 'BOOKSTORE/Books/REMOVE_BOOK';
 
-const Books = () => {
-  const [bookList, setBookList] = useState([]);
-  useEffect(() => {
-    setBookList([]);
-  }, []);
-  return (
-    <>
-      {
-       !bookList.length
-         ? <p>there are no books added yet.</p>
-         : bookList.map((bookItem) => (
-           <Book
-             key={bookItem.id}
-             title={bookItem.title}
-             author={bookItem.author}
-           />
-         ))
-      }
-      <Form />
-    </>
-  );
+export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
+
+export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
+
+const initialState = {
+  books: [],
 };
 
-export default Books;
+const booksReducer = (state = initialState, action = {}) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return { ...state, book: action.payload };
+    case REMOVE_BOOK:
+      return { ...state, books: state.books.filter((book) => book.id !== action.payload) };
+    default:
+      return state;
+  }
+};
+export default booksReducer;

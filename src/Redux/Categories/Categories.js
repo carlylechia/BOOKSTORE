@@ -1,3 +1,17 @@
-const Categories = () => <button type="button">Check Status</button>;
+const BOOK_STATUS = 'BOOKSTORE/Categories/Book_STATUS';
 
-export default Categories;
+export const checkStatus = (status) => ({ type: BOOK_STATUS, payload: status });
+
+const initialState = {
+  categories: [],
+};
+
+const categoriesReducer = (state = initialState, action = {}) => {
+  switch (action.type) {
+    case BOOK_STATUS:
+      return { ...state, status: action.payload };
+    default:
+      return state;
+  }
+};
+export default categoriesReducer;
