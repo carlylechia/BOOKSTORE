@@ -1,7 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
+import { connect } from 'react-redux';
+import dispatchToProps from './Redux/dispatchToProps';
+import stateToProps from './Redux/stateToProps';
+import Books from './Redux/Books/Books';
+import Categories from './Redux/Categories/Categories';
 import Navbar from './components/Navbar/Navbar';
-import Books from './components/Books/Books';
-import Categories from './components/Categories/Categories';
 
 const App = () => (
   <>
@@ -12,4 +15,4 @@ const App = () => (
     </Routes>
   </>
 );
-export default App;
+export default connect(stateToProps, dispatchToProps)(App);
