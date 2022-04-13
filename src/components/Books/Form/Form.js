@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addBook } from '../../../Redux/Books/Books';
 
-const Form = () => {
+const Form = ({ id }) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ const Form = () => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        const book = { title, author };
+        const book = { id, title, author };
         dispatch(addBook(book));
         setTitle('');
         setAuthor('');
@@ -34,6 +35,9 @@ const Form = () => {
       <button type="submit">Add new</button>
     </form>
   );
+};
+Form.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default Form;
