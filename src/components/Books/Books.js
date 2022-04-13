@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useSelector, shallowEqual } from 'react-redux';
 import Book from './Book/Book';
 import Form from './Form/Form';
 
 const Books = () => {
-  const [bookList, setBookList] = useState([]);
-  useEffect(() => {
-    setBookList([]);
-  }, []);
+  const bookList = useSelector((state) => state.booksReducer.books, shallowEqual);
   return (
     <>
       {
