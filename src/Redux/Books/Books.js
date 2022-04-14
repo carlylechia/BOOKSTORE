@@ -3,18 +3,33 @@ const REMOVE_BOOK = 'BOOKSTORE/Books/REMOVE_BOOK';
 
 export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 
-export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
+export const removeBook = (index) => ({ type: REMOVE_BOOK, payload: index });
 
 const initialState = {
-  books: [],
+  books: [{
+    id: 1, title: 'First', author: 'One',
+  },
+  {
+    id: 2, title: 'Second', author: 'Two',
+  },
+  {
+    id: 3, title: 'Third', author: 'Three',
+  },
+  {
+    id: 4, title: 'Forth', author: 'Four',
+  },
+  ],
 };
 
 const booksReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
-      return { ...state, book: action.payload };
+      return { ...state, books: [...state.books, action.payload] };
     case REMOVE_BOOK:
-      return { ...state, books: state.books.filter((book) => book.id !== action.payload) };
+      return {
+        ...state,
+        books: [...state.books.slice(0, action.payload), ...state.books.slice(action.payload + 1)],
+      };
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-const BOOK_STATUS = 'BOOKSTORE/Categories/Book_STATUS';
+const BOOK_STATUS = 'BOOKSTORE/Categories/BOOK_STATUS';
 
 export const checkStatus = (status) => ({ type: BOOK_STATUS, payload: status });
 
@@ -9,7 +9,7 @@ const initialState = {
 const categoriesReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case BOOK_STATUS:
-      return { ...state, status: 'Under construction' };
+      return { ...state, status: action.payload };
     default:
       return state;
   }
