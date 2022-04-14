@@ -6,7 +6,19 @@ export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 export const removeBook = (index) => ({ type: REMOVE_BOOK, payload: index });
 
 const initialState = {
-  books: [],
+  books: [{
+    id: 1, title: 'First', author: 'One',
+  },
+  {
+    id: 2, title: 'Second', author: 'Two',
+  },
+  {
+    id: 3, title: 'Third', author: 'Three',
+  },
+  {
+    id: 4, title: 'Forth', author: 'Four',
+  },
+  ],
 };
 
 const booksReducer = (state = initialState, action = {}) => {
