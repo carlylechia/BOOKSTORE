@@ -1,0 +1,71 @@
+form {
+  width: 87.6vw;
+  margin: 2.5rem 0.063rem 1.813rem 0;
+  border-top: solid 1px #e8e8e8;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form > h2 {
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+form > input {
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 8.922rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-family: Montserrat, serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+}
+
+form > input::placeholder {
+  color: #c4c4c4;
+}
+
+form > select {
+  margin: 1.188rem 0.125rem 0;
+  padding: 0.813rem 4rem 0.813rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  font-family: Montserrat, serif;
+  appearance: none;
+  background: url('../../../images/drop-arrow.png') no-repeat;
+  background-color: white;
+  background-position: bottom 50% right 5%;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+form > select > option {
+  color: black;
+}
+
+.selected {
+  color: gray;
+  opacity: 0.5;
+}
+
+form > button {
+  width: 11.5rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}

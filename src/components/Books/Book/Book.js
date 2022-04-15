@@ -31,8 +31,8 @@ const Book = ({
       <section className="progress-info">
         <Progress />
         <div className="reading-progress">
-          <p className="state-title">progress state</p>
-          <p className="state">not started</p>
+          <p className="state-title">CURRENT CHAPTER</p>
+          <p className="state">Chapter One</p>
           <button className="update-state" type="button">UPDATE PROGRESS</button>
         </div>
       </section>
