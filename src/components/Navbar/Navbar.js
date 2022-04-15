@@ -1,13 +1,32 @@
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+import { ImUser } from 'react-icons/im';
+import './Navbar.css';
 
-const Navbar = () => (
-  <>
-    <h2>Book Store</h2>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="categories">Categories</Link></li>
-    </ul>
-  </>
-);
+const Navbar = () => {
+  const { pathname } = useLocation();
+  const focus = {
+    opacity: 1,
+  };
+  return (
+    <>
+      <nav id="nav">
+        <h2 id="title">Bookstore CMS</h2>
+        <ul id="list">
+          <li>
+            <NavLink style={pathname === '/' ? focus : {}} className="nav-tab" to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink style={pathname === '/categories' ? focus : {}} className="nav-tab" to="categories">
+              Categories
+            </NavLink>
+          </li>
+        </ul>
+        <ImUser className="user-icon" />
+      </nav>
+    </>
+  );
+};
 
 export default Navbar;
