@@ -1,8 +1,14 @@
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { booksLoad } from '../../Redux/Books/Books';
 import Book from './Book/Book';
 import Form from './Form/Form';
 
 const Books = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(booksLoad());
+  }, []);
   const bookList = useSelector((state) => state.booksReducer.books, shallowEqual);
   const id = bookList.length ? bookList[bookList.length - 1].id + 1 : bookList.length + 1;
   return (
