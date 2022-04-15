@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../../Redux/Books/Books';
+import { bookRemove } from '../../../Redux/Books/Books';
 
 const Book = ({
-  author, title, category, bookIndex,
+  author, title, category, bookIndex, bookId,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -15,7 +15,7 @@ const Book = ({
         book-index={bookIndex}
         onClick={(e) => {
           const index = Number(e.target.getAttribute('book-index'));
-          dispatch(removeBook(index));
+          dispatch(bookRemove(index, bookId));
         }}
         type="button"
       >
@@ -30,5 +30,6 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   bookIndex: PropTypes.number.isRequired,
+  bookId: PropTypes.number.isRequired,
 };
 export default Book;
