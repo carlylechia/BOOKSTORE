@@ -1,6 +1,7 @@
 import { useSelector, shallowEqual } from 'react-redux';
 import Book from './Book/Book';
 import Form from './Form/Form';
+import './Books.css';
 
 const Books = () => {
   const bookList = useSelector((state) => state.booksReducer.books, shallowEqual);
@@ -9,7 +10,7 @@ const Books = () => {
     <>
       {
        !bookList.length
-         ? <p>there are no books added yet.</p>
+         ? <p className="empty-books-msg">There are no books added yet.</p>
          : bookList.map((bookItem, i) => (
            <Book
              key={bookItem.id}

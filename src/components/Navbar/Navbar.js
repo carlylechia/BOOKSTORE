@@ -14,12 +14,12 @@ const Navbar = () => {
         <ul id="list">
           <li>
             <NavLink style={pathname === '/' ? focus : {}} className="nav-tab" to="/">
-              Home
+              BOOKS
             </NavLink>
           </li>
           <li>
             <NavLink style={pathname === '/categories' ? focus : {}} className="nav-tab" to="categories">
-              Categories
+              CATEGORIES
             </NavLink>
           </li>
         </ul>
