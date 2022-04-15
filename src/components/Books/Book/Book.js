@@ -2,12 +2,15 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../../Redux/Books/Books';
 
-const Book = ({ author, title, bookIndex }) => {
+const Book = ({
+  author, title, category, bookIndex,
+}) => {
   const dispatch = useDispatch();
   return (
     <>
       <p>{title}</p>
       <p>{author}</p>
+      <p>{category}</p>
       <button
         book-index={bookIndex}
         onClick={(e) => {
@@ -25,6 +28,7 @@ const Book = ({ author, title, bookIndex }) => {
 Book.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   bookIndex: PropTypes.number.isRequired,
 };
 export default Book;

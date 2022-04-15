@@ -7,16 +7,16 @@ export const removeBook = (index) => ({ type: REMOVE_BOOK, payload: index });
 
 const initialState = {
   books: [{
-    id: 1, title: 'First', author: 'One',
+    id: 1, title: 'First', type: 'SciFi, Action', author: 'One',
   },
   {
-    id: 2, title: 'Second', author: 'Two',
+    id: 2, title: 'Second', type: 'Fantasy, Adventure', author: 'Two',
   },
   {
-    id: 3, title: 'Third', author: 'Three',
+    id: 3, title: 'Third', type: 'Crime and Investigation', author: 'Three',
   },
   {
-    id: 4, title: 'Forth', author: 'Four',
+    id: 4, title: 'Forth', type: 'Romance, Drama', author: 'Four',
   },
   ],
 };

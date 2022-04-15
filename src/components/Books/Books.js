@@ -16,6 +16,7 @@ const Books = () => {
              bookIndex={i}
              title={bookItem.title}
              author={bookItem.author}
+             category={bookItem.type}
            />
          ))
       }
