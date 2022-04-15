@@ -2,14 +2,17 @@
 
 #  BOOKSTORE
 
-> book store a place that you can add/read books and see your progress .
+> A great app which lets you store all your favorite books in one place for easy access when you want to read them. Progress is saved as you read and you are also free to and and delete books as you please.
+
 ## Built With
 
 - JSX, React, Redux
 - HTML, CSS, JavaScript
 - npm, webpack, linters
 
+## Live Demo
 
+Click [this link](https://6259c6bb66eab311776f4912--starlit-moonbeam-3bc26a.netlify.app/) to be redirected to the bookstore web application, hosted with netlify.
 
 ## Getting Started
 

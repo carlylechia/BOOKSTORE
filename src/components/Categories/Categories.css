@@ -1,5 +1,5 @@
 #check-status {
-  margin: 0.5em;
+  margin: 2rem auto auto 51em;
   padding: 0.5rem 1.188rem;
   border-radius: 3px;
   border: none;
@@ -17,4 +17,5 @@
   margin-left: 0.5rem;
   margin-top: 0.5rem;
   font-family: 'Roboto Slab', serif;
+  text-align: center;
 }
