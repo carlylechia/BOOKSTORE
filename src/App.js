@@ -5,6 +5,7 @@ import { booksLoad } from './Redux/Books/Books';
 import Books from './components/Books/Books';
 import Categories from './components/Categories/Categories';
 import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
 const App = () => {
   const dispatch = useDispatch();
