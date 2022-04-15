@@ -8,11 +8,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <Router>
-    <Provider store={store}>
+  <Provider store={store}>
+    <Router>
       <App />
-    </Provider>
-  </Router>,
+    </Router>
+  </Provider>,
 );
 
 reportWebVitals();
